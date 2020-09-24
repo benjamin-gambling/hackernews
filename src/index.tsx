@@ -15,8 +15,11 @@ import { BrowserRouter } from "react-router-dom";
 import { setContext } from "apollo-link-context";
 import { AUTH_TOKEN } from "./constants";
 
+const HOST = window.location.hostname;
+const PORT = process.env.PORT || 4000;
+
 const httpLink = createHttpLink({
-  uri: "http://localhost:4000",
+  uri: `http://${HOST}:${PORT}`,
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -30,7 +33,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const wsLink = new WebSocketLink({
-  uri: `ws://localhost:4000`,
+  uri: `ws://${HOST}:${PORT}`,
   options: {
     reconnect: true,
     connectionParams: {

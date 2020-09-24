@@ -17,5 +17,6 @@
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "proxy": "http://localhost:4000"
 }
