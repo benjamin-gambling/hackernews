@@ -45,7 +45,6 @@ Server
 
 - Expand on topics learnt
 - Better design
-- Make link clickable
 
 ## License
 

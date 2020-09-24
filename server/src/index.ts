@@ -7,6 +7,8 @@ const Subscription = require("./resolvers/Subscription.ts");
 const User = require("./resolvers/User.ts");
 const Link = require("./resolvers/Link.ts");
 const Vote = require("./resolvers/Vote.ts");
+const path = require("path");
+const express = require("express");
 
 const prisma = new PrismaClient();
 const pubsub = new PubSub();
@@ -21,9 +23,10 @@ const resolvers = {
 };
 
 const server = new GraphQLServer({
-  typeDefs: "./src/schema.graphql",
+  typeDefs: "./server/src/schema.graphql",
   resolvers,
   context: (request) => {
+    ``;
     return {
       ...request,
       prisma,
@@ -32,4 +35,16 @@ const server = new GraphQLServer({
   },
 });
 
-server.start(() => console.log(`Server is running`));
+const PORT = process.env.PORT || 4000;
+
+let TYPE = "public";
+
+if (process.env.NODE_ENV === "production") TYPE = "build";
+
+server.express.use(express.static(`../../${TYPE}`));
+
+server.express.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, `../../${TYPE}", "index.html`));
+});
+
+server.start(() => console.log(`Server started on port ${PORT}`));
