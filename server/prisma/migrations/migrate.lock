@@ -1,3 +1,8 @@
 # Prisma Migrate lockfile v1
 
 20200920012322-init
+20200921005940-add-user-model
+20200921034014-add-vote-model
+20200921235728-init
+20200922185958-remove---unique-field-due-to-errrors
+20200922213507-redo-previous-migration-but-with-specifc-name

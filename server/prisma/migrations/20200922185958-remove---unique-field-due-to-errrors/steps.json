@@ -1,0 +1,25 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "DeleteDirective",
+      "location": {
+        "path": {
+          "tag": "Model",
+          "model": "Vote",
+          "arguments": [
+            {
+              "name": "",
+              "value": "[linkId, userId]"
+            },
+            {
+              "name": "name",
+              "value": "\"Vote.linkId_userId_unique\""
+            }
+          ]
+        },
+        "directive": "unique"
+      }
+    }
+  ]
+}

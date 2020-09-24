@@ -8,6 +8,10 @@ input {
   max-width: 500px;
 }
 
+#upvote {
+  cursor: pointer;
+}
+
 .gray {
   color: #828282;
 }
