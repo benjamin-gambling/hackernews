@@ -44,18 +44,18 @@ class CreateLink extends Component<RouteComponentProps> {
           variables={{ description, url }}
           onCompleted={() => this.props.history.push("/new/1")}
           update={(store: any, { data: { post } }: any) => {
-            const first = LINKS_PER_PAGE;
+            const take = LINKS_PER_PAGE;
             const skip = 0;
-            const orderBy = "createdAt_DESC";
+            const orderBy = { createdAt: "desc" };
             const data = store.readQuery({
               query: FEED_QUERY,
-              variables: { first, skip, orderBy },
+              variables: { take, skip, orderBy },
             });
             data.feed.links.unshift(post);
             store.writeQuery({
               query: FEED_QUERY,
               data,
-              variables: { first, skip, orderBy },
+              variables: { take, skip, orderBy },
             });
           }}
         >
