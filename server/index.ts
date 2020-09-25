@@ -9,6 +9,8 @@ const Link = require("./resolvers/Link.ts");
 const Vote = require("./resolvers/Vote.ts");
 const path = require("path");
 const express = require("express");
+const compression = require("compression");
+const helmet = require("helmet");
 
 const prisma = new PrismaClient();
 const pubsub = new PubSub();
@@ -34,6 +36,9 @@ const server = new GraphQLServer({
     };
   },
 });
+
+server.express.use(helmet());
+server.express.use(compression());
 
 const PORT = process.env.PORT || 4000;
 
