@@ -14,8 +14,11 @@ In this porject i created a clone of Hackernews. The front end was created using
 
 ## Demo
 
-Here is the working live demo:
-[https://benjamin-gambling.github.io/](https://benjamin-gambling.github.io/).
+1. `gti clone https://github.com/benjamin-gambling/hackernews.git`
+2. `cd path/to/file/hackernews`
+3. `npm install`
+4. `npm start`
+5. `Client: http://localhost:3000/ Server: http://localhost:4000/`
 
 ## Technologies
 
@@ -41,10 +44,15 @@ Server
 - User Auth
 - Storing JWTs in localStorage is not a safe approach to implement authentication on the frontend but wanted to keep things simple to focus on GraphQL.
 
+# ![Hacknews Clone](readme_img/screenshot2.png)
+
+# ![Hacknews Clone](readme_img/screenshot3.png)
+
 ### Devlopment
 
 - Expand on topics learnt
 - Better design
+- Deploy to Heroku (Current issue w/ deployment of prisma)
 
 ## License
 
