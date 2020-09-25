@@ -37,7 +37,7 @@ const server = new GraphQLServer({
   },
 });
 
-server.express.use(helmet());
+server.express.use(helmet({ contentSecurityPolicy: false }));
 server.express.use(compression());
 
 const PORT = process.env.PORT || 4000;
