@@ -37,12 +37,10 @@ const server = new GraphQLServer({
 
 const PORT = process.env.PORT || 4000;
 
-let TYPE = "public";
-
-server.express.use(express.static(`/build`));
+server.express.use(express.static(`../build`));
 
 server.express.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, `build", "index.html`));
+  res.sendFile(path.resolve(__dirname, `../build/index.html`));
 });
 
 server.start(() => console.log(`Server started on port ${PORT}`));
