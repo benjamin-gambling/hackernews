@@ -35,7 +35,7 @@ const server = new GraphQLServer({
   },
 });
 
-// const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 
 // let TYPE = "public";
 
