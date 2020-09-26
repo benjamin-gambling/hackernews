@@ -43,9 +43,9 @@
     "dotenv": "^8.2.0"
   },
   "scripts": {
-    "start": "npm-run-all --parallel start:web start:server",
+    "devstart": "npm-run-all --parallel start:web start:server",
     "start:web": "react-scripts start",
-    "start:server": "node server/index.ts",
+    "start": "node server/index.ts",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
