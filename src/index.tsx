@@ -33,7 +33,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const wsLink = new WebSocketLink({
-  uri: `ws://${HOST}:${PORT}`,
+  uri: `ws://${HOST}`,
   options: {
     reconnect: true,
     connectionParams: {
