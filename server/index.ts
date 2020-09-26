@@ -42,7 +42,7 @@ server.express.use(compression());
 
 const PORT = process.env.PORT || 4000;
 
-server.express.use("/", express.static(`/../build`));
+server.express.use("/", express.static(`/../build/static`));
 
 server.express.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname + `/../build/index.html`));
