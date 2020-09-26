@@ -42,10 +42,10 @@ server.express.use(compression());
 
 const PORT = process.env.PORT || 4000;
 
-server.express.use("/", express.static(`/build/static`));
+server.express.use("/", express.static(`../build/static`));
 
 server.express.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname + `/build/index.html`));
+  res.sendFile(path.resolve(__dirname + `../build/index.html`));
 });
 
 server.start(() => console.log(`Server started on port ${PORT}`));
