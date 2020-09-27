@@ -16,10 +16,9 @@ import { setContext } from "apollo-link-context";
 import { AUTH_TOKEN } from "./constants";
 
 const HOST = window.location.hostname;
-const PORT = process.env.PORT || 4000;
 
 const httpLink = createHttpLink({
-  uri: `http://${HOST}`,
+  uri: `https://${HOST}`,
 });
 
 const authLink = setContext((_, { headers }) => {
