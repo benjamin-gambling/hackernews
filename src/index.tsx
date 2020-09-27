@@ -19,7 +19,7 @@ const HOST = window.location.hostname;
 const PORT = process.env.PORT || 4000;
 
 const httpLink = createHttpLink({
-  uri: `http://${HOST}:${PORT}`,
+  uri: `http://${HOST}`,
 });
 
 const authLink = setContext((_, { headers }) => {
