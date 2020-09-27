@@ -14,11 +14,8 @@ In this porject i created a clone of Hackernews. The front end was created using
 
 ## Demo
 
-1. `gti clone https://github.com/benjamin-gambling/hackernews.git`
-2. `cd path/to/file/hackernews`
-3. `npm install`
-4. `npm start`
-5. `Client: http://localhost:3000/ Server: http://localhost:4000/`
+Here is the working live demo:
+[https://bgwd-hackernews-clone.herokuapp.com/](https://bgwd-hackernews-clone.herokuapp.com/).
 
 ## Technologies
 
@@ -52,7 +49,7 @@ Server
 
 - Expand on topics learnt
 - Better design
-- Deploy to Heroku (Current issue w/ deployment of prisma)
+- Show messages for incorrect password/user doesnt exist etc.
 
 ## License
 
